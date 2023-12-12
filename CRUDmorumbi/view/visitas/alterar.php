@@ -24,6 +24,7 @@ if(isset($_POST['submetido'])) {
     
     //Criar um objeto Visita para persistência
     $visita = new Visita();
+    $visita->setId($idVisita);
     $visita->setNomeVisitante($nomeVisitante);
     $visita->setCpf($cpf);
     $visita->setDataVisita($dataVisita);

@@ -42,6 +42,10 @@ class VisitaController {
         $erros = $this->visitaService->validarDados($visita);
         if($erros) 
             return $erros;
+
+
+        //print_r($visita);
+        //die;
         
         //Persiste o objeto e retorna um array vazio
         $this->visitaDAO->update($visita);
