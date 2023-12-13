@@ -2,13 +2,23 @@ function buscarDadosVisita(idVisita) {
     //AJAX
 
     var url = 'http://localhost/MyProjects/CRUDmorumbi/api/buscarVisita.php?idVisita=' + idVisita;
-    var dados = document.querySelector('#divDadosVisita');
+    var dados = document.querySelector('.divDadosVisita');
 
-    dados.innerHTML = '';
+    dados.innerHTML = '<h4>Informações do visitante:</h4>';
 
 
-    var dado = document.createElement('td');
+    var dado = document.createElement('p');
 
+    var botao = document.createElement('button');
+    botao.textContent = 'Limpar';
+    dados.appendChild(botao);
+
+    botao.onclick = function(){
+        dado.innerHTML = '';
+        botao.remove();
+    }
+
+    
     dados.appendChild(dado);
     
     var xhttp = new XMLHttpRequest();
@@ -23,10 +33,9 @@ function buscarDadosVisita(idVisita) {
         
         dado.innerHTML = "Nome do visitante: " + visita.nomeVisitante +
                 "<br>CPF: " + visita.cpf +
-                "<br>Data da Visita: " + visita.dataVisita+
-                // Adicione outros campos conforme necessário
-                "<br>Idolo: " + visita.idolos.nomeIdolo;
-                "<br>Tipo da visita" + visita.tipoVisita.descVisita;
+                "<br>Data da Visita: " + visita.dataVisita +
+                "<br>Idolo: " + visita.idolos.nomeIdolo +
+                "<br>Tipo da visita: " + visita.tipoVisita.descVisita;
 
                 
         //console.log(retornoTexto);

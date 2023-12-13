@@ -12,6 +12,15 @@ $tipoVisitaCont = new TipoVisitaController();
 $tipo = $tipoVisitaCont->listar();
 ?>
 
+<style>
+    .conatinerList{
+        overflow-y: hidden;
+    }
+</style>
+
+<div class="containerList">
+
+
 <h2><?php echo (!$visita || $visita->getId() <= 0 ? 'Inserir' : 'Alterar') ?> Visita</h2>
 
 <div class="row mb-3">
@@ -72,19 +81,25 @@ $tipo = $tipoVisitaCont->listar();
                 </select>
             </div>
 
+            <!-- Gravar AJAX -->
+
+
+            <input type="hidden" id="hddBaseUrl" value="<?= BASE_URL ?>" />
+
             <input type="hidden" name="id" 
                 value="<?php echo ($visita ? $visita->getId() : 0); ?>" />
             
             <input type="hidden" name="submetido" value="1" />
 
-            <button type="submit" class="btn btn-success">Gravar</button>
+            <button class="btn btn-success" 
+            <?php echo (!$visita || $visita->getId() <= 0 ? "onclick='inserirVisitante();'" : " type='submit'") ?>>GRAVAR</button>
             <button type="reset" class="btn btn-info">Limpar</button>
         </form>
     </div>
 
     <div class="col-6">
         <?php if($msgErro): ?>
-            <div class="alert alert-danger">
+            <div class="alert alert-danger" id="divMsgErro">
                 <?php echo $msgErro; ?>
             </div>
         <?php endif; ?>
@@ -92,5 +107,9 @@ $tipo = $tipoVisitaCont->listar();
 </div>
 
 <a href="listar.php" class="btn btn-outline-secondary">Voltar</a>
+
+</div>
+
+<script src="js/visita.js"></script>
 
 <?php require_once(__DIR__ . "/../include/footer.php"); ?>

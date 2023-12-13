@@ -8,7 +8,7 @@
         {
             $json = array(
                 "id" => $this->id,
-                "descrição da visita" => $this->descVisita
+                "descVisita" => $this->descVisita
         );
         return $json;
 

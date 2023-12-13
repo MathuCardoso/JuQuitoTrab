@@ -12,7 +12,7 @@
 
     <title>Tour no Morumbi</title>
 </head>
-<body class="text-light" style="background: linear-gradient(to top, red, black); height: 100vh; overflow-y: hidden;">
+<body class="text-light" style="background: linear-gradient(to top, red, black); height: 100vh; background-attachment: fixed;">
 
     <div class="container"> <!-- Será fechada no footer.php -->
 
