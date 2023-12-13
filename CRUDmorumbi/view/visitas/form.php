@@ -89,6 +89,7 @@ $tipo = $tipoVisitaCont->listar();
 
                 <input type="hidden" name="submetido" value="1" />
 
+
                 <?php
 
                 if (!$visita || $visita->getId() <= 0) {

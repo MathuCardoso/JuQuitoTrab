@@ -17,6 +17,7 @@ function buscarDadosVisita(idVisita) {
 
     botao.onclick = function(){
         dado.innerHTML = '';
+        dados.innerHTML = '<h4>Selecione uma visita.</h4>';
         botao.remove();
     }
 

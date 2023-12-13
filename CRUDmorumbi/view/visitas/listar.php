@@ -22,7 +22,7 @@ require(__DIR__ . "/../include/header.php");
 
 <div class="divDadosVisita my-3" style="background-color: transparent; padding: 15px; width: max-content; border-radius: 10px; border: 3px solid black;">
 
-    <h4>Selecione uma visita.</h4>
+    <h4 id="textt">Selecione uma visita.</h4>
 
     </div>
 

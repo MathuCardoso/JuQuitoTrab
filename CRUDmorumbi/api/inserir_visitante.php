@@ -8,11 +8,10 @@ require_once(__DIR__ . "/../model/TipoVisita.php");
 require_once(__DIR__ . "/../model/Visita.php");
 
 $msgErro = '';
-$lutador = null;
 
 // Captura os campos do formulário
 
-$nomeVisitante = trim($_POST['nomeVisitante']) ? trim($_POST['nomeVisitante']) : null;
+    $nomeVisitante = trim($_POST['nomeVisitante']) ? trim($_POST['nomeVisitante']) : null;
     $cpf = isset($_POST['cpf']) ? $_POST['cpf'] : null;
     $dataVisita = trim($_POST['dataVisita']) ? trim($_POST['dataVisita']) : null;
     $idIdolo = is_numeric($_POST['idolo']) ? $_POST['idolo'] : null;
