@@ -2,10 +2,12 @@ function buscarDadosVisita(idVisita) {
     //AJAX
 
     var url = 'http://localhost/MyProjects/CRUDmorumbi/api/buscarVisita.php?idVisita=' + idVisita;
+    
     var dados = document.querySelector('.divDadosVisita');
 
-    dados.innerHTML = '<h4>Informações do visitante:</h4>';
+    dados.innerHTML = '<h4>Informações da visita:</h4>';
 
+    
 
     var dado = document.createElement('p');
 

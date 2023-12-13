@@ -22,8 +22,7 @@ require(__DIR__ . "/../include/header.php");
 
 <div class="divDadosVisita my-3" style="background-color: transparent; padding: 15px; width: max-content; border-radius: 10px; border: 3px solid black;">
 
-    <h4>Informações do visitante:</h4>
-
+    <h4>Selecione uma visita.</h4>
 
     </div>
 
@@ -42,7 +41,7 @@ require(__DIR__ . "/../include/header.php");
 
             <br>
             <a href="#" onclick="buscarDadosVisita(<?= $v->getId() ?>);" style="color: white; font-weight: bold; text-decoration: none;">
-                informações da visita
+                Visualizar Informações
             </a>
 
             <br><br>
@@ -51,8 +50,6 @@ require(__DIR__ . "/../include/header.php");
 
 
 <?php endforeach; ?>
-
-</div>
 
 
 
